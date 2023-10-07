@@ -37,11 +37,11 @@ public protocol WKDownloadManagerDelegate: AnyObject {
 
 extension WKDownloadManagerDelegate {
     
-    func webView(_ webView: WKWebView, decidePolicyFor url: URL) -> Bool {
+    public func webView(_ webView: WKWebView, decidePolicyFor url: URL) -> Bool {
         return true
     }
     
-    func destinationUrlForFile(withName name: String) -> URL? {
+    public func destinationUrlForFile(withName name: String) -> URL? {
         let temporaryDir = NSTemporaryDirectory()
         let url = URL(fileURLWithPath: temporaryDir)
             .appendingPathComponent(UUID().uuidString)
@@ -53,7 +53,7 @@ extension WKDownloadManagerDelegate {
         return url.appendingPathComponent(name)
     }
     
-    func downloadDidFailed(withError error: Error) {
+    public func downloadDidFailed(withError error: Error) {
         
     }
     
