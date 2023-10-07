@@ -10,9 +10,9 @@
 		5BA727612AD13F250041E3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA727602AD13F250041E3F2 /* AppDelegate.swift */; };
 		5BA727632AD13F250041E3F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA727622AD13F250041E3F2 /* SceneDelegate.swift */; };
 		5BA727652AD13F250041E3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA727642AD13F250041E3F2 /* ViewController.swift */; };
-		5BA727682AD13F250041E3F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA727662AD13F250041E3F2 /* Main.storyboard */; };
 		5BA7276A2AD13F260041E3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA727692AD13F260041E3F2 /* Assets.xcassets */; };
 		5BA7276D2AD13F260041E3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7276B2AD13F260041E3F2 /* LaunchScreen.storyboard */; };
+		5BA727762AD13F450041E3F2 /* WKDownloadManager in Frameworks */ = {isa = PBXBuildFile; productRef = 5BA727752AD13F450041E3F2 /* WKDownloadManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,6 @@
 		5BA727602AD13F250041E3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA727622AD13F250041E3F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5BA727642AD13F250041E3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BA727672AD13F250041E3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BA727692AD13F260041E3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA7276C2AD13F260041E3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA7276E2AD13F260041E3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA727762AD13F450041E3F2 /* WKDownloadManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,6 @@
 				5BA727602AD13F250041E3F2 /* AppDelegate.swift */,
 				5BA727622AD13F250041E3F2 /* SceneDelegate.swift */,
 				5BA727642AD13F250041E3F2 /* ViewController.swift */,
-				5BA727662AD13F250041E3F2 /* Main.storyboard */,
 				5BA727692AD13F260041E3F2 /* Assets.xcassets */,
 				5BA7276B2AD13F260041E3F2 /* LaunchScreen.storyboard */,
 				5BA7276E2AD13F260041E3F2 /* Info.plist */,
@@ -83,6 +82,9 @@
 			dependencies = (
 			);
 			name = WebViewDownloaderExample;
+			packageProductDependencies = (
+				5BA727752AD13F450041E3F2 /* WKDownloadManager */,
+			);
 			productName = WebViewDownloaderExample;
 			productReference = 5BA7275D2AD13F250041E3F2 /* WebViewDownloaderExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 5BA727542AD13F250041E3F2;
+			packageReferences = (
+				5BA727742AD13F450041E3F2 /* XCRemoteSwiftPackageReference "WKDownloadManager" */,
+			);
 			productRefGroup = 5BA7275E2AD13F250041E3F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +132,6 @@
 			files = (
 				5BA7276D2AD13F260041E3F2 /* LaunchScreen.storyboard in Resources */,
 				5BA7276A2AD13F260041E3F2 /* Assets.xcassets in Resources */,
-				5BA727682AD13F250041E3F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BA727662AD13F250041E3F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BA727672AD13F250041E3F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BA7276B2AD13F260041E3F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,9 +293,10 @@
 				INFOPLIST_FILE = WebViewDownloaderExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,9 +322,10 @@
 				INFOPLIST_FILE = WebViewDownloaderExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BA727742AD13F450041E3F2 /* XCRemoteSwiftPackageReference "WKDownloadManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kuttz/WKDownloadManager";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BA727752AD13F450041E3F2 /* WKDownloadManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BA727742AD13F450041E3F2 /* XCRemoteSwiftPackageReference "WKDownloadManager" */;
+			productName = WKDownloadManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BA727552AD13F250041E3F2 /* Project object */;
 }
